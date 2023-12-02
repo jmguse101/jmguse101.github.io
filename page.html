@@ -418,13 +418,13 @@ function minutesToTime(m) {
 	var minutes = (m + 4*60) % 1440;
 	var term = Math.floor(minutes / 120);
 	var mm = minutes % 60;
-	var semester = 1
+	var semester = "Fall"
 	var year = 2021
 	if (mm < 10) {
 		mm = "0" + mm;
 	}
 	
-	return term + " : " + semester + year 
+	return "Term " term + ": " + semester + " " + year 
 }
 
 
