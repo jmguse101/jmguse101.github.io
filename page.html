@@ -69,7 +69,7 @@ var act_codes = [
 	{"index": "21", "short": "Healthcare Management", "desc": "Healthcare Management"},
 	{"index": "22", "short": "Healthcare Sales", "desc": "Healthcare Sales"},
 	{"index": "23", "short": "History", "desc": "History"},
-	{"index": "24", "short": "", "desc": "International Studies"},
+	{"index": "24", "short": "International Studies", "desc": "International Studies"},
 	{"index": "25", "short": "Interpreting", "desc": "Interpreting and American Sign Language"},
 ];
 
@@ -416,25 +416,13 @@ function readablePercent(n) {
 // Minutes to time of day. Data is minutes from 4am.
 function minutesToTime(m) {
 	var minutes = (m + 4*60) % 1440;
-	var hh = Math.floor(minutes / 60);
-	var ampm;
-	if (hh > 12) {
-		hh = hh - 12;
-		ampm = "pm";
-	} else if (hh == 12) {
-		ampm = "pm";
-	} else if (hh == 0) {
-		hh = 12;
-		ampm = "am";
-	} else {
-		ampm = "am";
-	}
+	var hh = Math.floor(minutes / 120);
 	var mm = minutes % 60;
 	if (mm < 10) {
 		mm = "0" + mm;
 	}
 	
-	return hh + ":" + mm + ampm
+	return hh + ":" + mm 
 }
 
 
