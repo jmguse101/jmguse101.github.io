@@ -132,7 +132,7 @@ var svg = d3.select("#chart").append("svg")
 
 
 // Load data and let's do it.
-ds.tsv("data/majortest.tsv", function(error, data) {	
+ds.tsv("majortest.tsv", function(error, data) {	
 	
 	data.forEach(function(d) {
 		var day_array = d.day.split(",");
