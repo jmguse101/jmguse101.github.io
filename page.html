@@ -313,9 +313,9 @@ d3.tsv("majorsnodedata.tsv", function(error, data) {
 		
 		// Make sleep more sluggish moving.
 		if (curr_act == "0") {
-			var damper = 0.8;
+			var damper = 0.7;
 		} else {
-			var damper = 0.8;
+			var damper = 0.7;
 		}
 		o.color = color(curr_act);
 	    o.y += (foci[curr_act].y - o.y) * k * damper;
