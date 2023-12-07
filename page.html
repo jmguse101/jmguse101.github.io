@@ -267,11 +267,11 @@ d3.tsv("majorsnodedata2.tsv", function(error, data) {
 			});
 	
 		// Update time
-		var true_minute = curr_minute % 1440;
+		var true_minute = curr_minute % 840;
 		d3.select("#current_time").text(minutesToTime(true_minute));
 		
 		// Update notes
-		// var true_minute = curr_minute % 1440;
+		// var true_minute = curr_minute % 840;
 		if (true_minute == time_notes[notes_index].start_minute) {
 			d3.select("#note")
 				.style("top", "0px")
@@ -450,7 +450,7 @@ function readablePercent(n) {
 // Minutes to time of day. Data is minutes from 4am.
 function minutesToTime(m) {
 	var minutes = (m + 4*60)%1440;
-	var term = Math.floor(minutes / 120);
+	var term = Math.floor(minutes / 120)-1;
 	var semester = "";
 	if (term % 3 == 1) {
 		semester = "Fall";}
