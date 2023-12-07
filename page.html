@@ -313,9 +313,9 @@ d3.tsv("majorsnodedata.tsv", function(error, data) {
 		
 		// Make sleep more sluggish moving.
 		if (curr_act == "0") {
-			var damper = 0.4;
+			var damper = 0.8;
 		} else {
-			var damper = 0.4;
+			var damper = 0.8;
 		}
 		o.color = color(curr_act);
 	    o.y += (foci[curr_act].y - o.y) * k * damper;
@@ -449,7 +449,7 @@ function readablePercent(n) {
 
 // Minutes to time of day. Data is minutes from 4am.
 function minutesToTime(m) {
-	var minutes = (m + 4*60) % 1440;
+	var minutes = (m + 4*60);
 	var term = Math.floor(minutes / 120)-1;
 	var semester = "";
 	if (term % 3 == 1) {
