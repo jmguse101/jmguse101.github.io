@@ -53,15 +53,15 @@ var act_codes = [
 	{"index": "5", "short": "Business", "desc": "Business Administration and Business Management"},
 	{"index": "6", "short": "Chemistry", "desc": "Chemistry"},
 	{"index": "7", "short": "Biochemistry", "desc": "Chemistry: Biochemistry Conc"},
-	{"index": "8", "short": "Childhood Education", "desc": "Early Childhood Education, Elementary Education, and AMS Early Chilhood Education Cert"},
+	{"index": "8", "short": "Childhood Edu.", "desc": "Early Childhood Education, Elementary Education, and AMS Early Chilhood Education Cert"},
 	{"index": "9", "short": "Communication", "desc": "Communication Studies"},
-	{"index": "10", "short": "Computer Science", "desc": "Computer Science"},
-	{"index": "11", "short": "Data Science", "desc": "Data Science"},
+	{"index": "10", "short": "Computer Sci.", "desc": "Computer Science"},
+	{"index": "11", "short": "Data Sci.", "desc": "Data Science"},
 	{"index": "12", "short": "Echo", "desc": "Echocardiology and Echocardiography"},
 	{"index": "13", "short": "Economics", "desc": "Economics and Financial Economics"},
-	{"index": "14", "short": "Electronic Media Studies", "desc": "Electronic Media Studies and Film Studies"},
+	{"index": "14", "short": "Media Studies", "desc": "Electronic Media Studies and Film Studies"},
 	{"index": "15", "short": "English", "desc": "English"},
-	{"index": "16", "short": "Exercise and Sport Science", "desc": "Exercise and Sport Science and Appl Science in Exercise Sci"},
+	{"index": "16", "short": "Exercise Sport Sci.", "desc": "Exercise and Sport Science and Appl Science in Exercise Sci"},
 	{"index": "17", "short": "Fashion", "desc": "Fashion Design and Fashion Merchandising"},
 	{"index": "18", "short": "Healthcare Sales", "desc": "Healthcare Sales and Healthcare Management"},
 	{"index": "19", "short": "History", "desc": "History"},
@@ -73,7 +73,7 @@ var act_codes = [
 	{"index": "25", "short": "Nutrition", "desc": "Nutrition Science, Dietetics, and Exercise Science and Nutrition"},
 	{"index": "26", "short": "Philosophy", "desc": "Philosophy"},
 
-	{"index": "28", "short": "Politcal Science", "desc": "Political Science"},
+	{"index": "28", "short": "Politcal Sci.", "desc": "Political Science"},
 	{"index": "29", "short": "Psych", "desc": "Psychology, Applied Science in Psychology"},
 	{"index": "30", "short": "Public Health", "desc": "Public Health: Health Sciences, Public Health, Public Policy, Public Health: Cmnty Health Worker, Cmnty Health Worker Cert"},
 	{"index": "31", "short": "Public Policy", "desc": "Public Policy"},
@@ -313,9 +313,9 @@ d3.tsv("majorsnodedata.tsv", function(error, data) {
 		
 		// Make sleep more sluggish moving.
 		if (curr_act == "0") {
-			var damper = 0.6;
+			var damper = 0.4;
 		} else {
-			var damper = 0.6;
+			var damper = 0.4;
 		}
 		o.color = color(curr_act);
 	    o.y += (foci[curr_act].y - o.y) * k * damper;
