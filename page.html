@@ -450,7 +450,7 @@ function readablePercent(n) {
 // Minutes to time of day. Data is minutes from 4am.
 function minutesToTime(m) {
 	var minutes = (m + 4*60)%1440;
-	var term = Math.floor(minutes / 120)-1;
+	var term = Math.floor(minutes / 120);
 	var semester = "";
 	if (term % 3 == 1) {
 		semester = "Fall";}
