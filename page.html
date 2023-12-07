@@ -25,7 +25,7 @@
 </div>
 <div id="note"></div>
 <div id="cite">
-This is a simulation of 400 people's majors across 7 terms. It's based on data from Institutional Research including students from the 2021 cohort. </a>.
+This is a simulation of 400 people's majors across 7 terms. It's based on data from Institutional Research including students from the 2021 cohort</a>.
 </div>
 </div>
 <div id="chart"></div>
@@ -315,7 +315,7 @@ d3.tsv("majorsnodedata.tsv", function(error, data) {
 		if (curr_act == "0") {
 			var damper = 0.6;
 		} else {
-			var damper = 1;
+			var damper = 0.6;
 		}
 		o.color = color(curr_act);
 	    o.y += (foci[curr_act].y - o.y) * k * damper;
