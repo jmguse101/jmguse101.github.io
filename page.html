@@ -305,7 +305,7 @@ d3.tsv("majorsnodedata.tsv", function(error, data) {
 	
 		
 	function tick(e) {
-	  var k = 0.04 * e.alpha;
+	  var k = 0.9 * e.alpha;
   
 	  // Push nodes toward their designated focus.
 	  nodes.forEach(function(o, i) {
